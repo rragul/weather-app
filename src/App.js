@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 function App() {
   const [data, setData] = useState([]);
   const [location, setLocation] = useState('London');
-  const url = " http://api.weatherapi.com/v1";
+  const url = " https://api.weatherapi.com/v1";
   const key = "baa954a94d8a450784d82305221411";
 
    useEffect(() =>  {
