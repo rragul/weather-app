@@ -3,7 +3,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 function App() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(null);
   const [location, setLocation] = useState('London');
   const url = " https://api.weatherapi.com/v1";
   const key = "baa954a94d8a450784d82305221411";
@@ -36,8 +36,10 @@ function App() {
       });
     }
   }
+  console.log(data);
   return (
     <div>
+      {!data? <div className="loading"><div class="lds-dual-ring"></div>Loading</div>:
       <div className="container">
         <div className="input">
           <input
@@ -87,6 +89,7 @@ function App() {
           </div>
         </div>
       </div>
+}
     </div>
   );
 }
